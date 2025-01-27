@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body, .login-container {
+  height: 100vh;
+}
+
+.login-container {
+  background-color: rgba(255,240,5,0.5);
+}
+
+.bg1 {
+  background-image: url("../../assets/img/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  border-radius: 5%;
+}
+
+.card, .card *:not(.form-check-input) {
+  width: 100%;
+}
+
+.card-body p {
+  font-size: 13px;
+  color: rgb(120,109,109);
+}
+
+.mb-3 {
+  position: relative;
+}
+
+.mb-3 > .bi.bi-check2, .mb-3 > .far.fa-eye-slash {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 5%;
+}
+
+.mb-3 .btn {
+  background-color: #ffff00;
+  color: #000000;
+  border-radius: 50px;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #a99a9a;
+  border-radius: 0;
+}
+
+.form-label {
+  font-size: 14px;
+}
+
+.form-check-label {
+  color: rgb(120,109,109);
+  font-size: 13px;
+}
+
