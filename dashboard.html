@@ -9,9 +9,109 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <div class="container-fluid"></div>
+<body class="bg1" oncontextmenu="return false;">
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img class="navbar-img" src="assets/img/mangosort_icon.png"><a class="navbar-brand" href="#">Carabao Mango Sorting</a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-1">
+                <div class="d-flex justify-content-center align-items-center db-header ps-3 pe-3 bg1"><img class="img-fluid db-img" src="assets/img/mangosort_icon.png" width="41" height="41">
+                    <h4 class="fw-bold">Carabao Mango Data</h4>
+                </div>
+                <div class="container mt-3">
+                    <p>Main</p><a class="d-block mb-3" href="#"><img class="img-fluid me-2 invert" src="assets/img/dashboard_icon.png">Dashboard</a><a class="d-block" href="table.html"><img class="img-fluid me-2" src="assets/img/decaymango_icon.png">Mango Table Data</a>
+                    <hr>
+                    <p>Profile</p><a class="d-block" href="/"><img class="img-fluid me-2 invert" src="assets/img/signout_icon.png">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row head m-0">
+            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/rawmango_icon.png"></div>
+            <div class="col text-center align-self-center">
+                <p class="text-start">Raw Mango</p>
+                <p class="text-start">Total:</p>
+            </div>
+            <div class="col-3 text-center align-self-center">
+                <p id="raw-total">0</p>
+            </div>
+        </div>
+        <div class="row body m-0 pt-2 pb-4">
+            <div class="col text-center mx-auto pt-2 pb-2 ms-2">
+                <div>
+                    <p>Small</p>
+                    <p id="raw-small">0</p>
+                </div>
+            </div>
+            <div class="col text-center mx-auto pt-2 pb-2">
+                <div>
+                    <p>Medium</p>
+                    <p id="raw-medium">0</p>
+                </div>
+            </div>
+            <div class="col text-center mx-auto pt-2 pb-2 me-2">
+                <div>
+                    <p>Large</p>
+                    <p id="raw-large">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row head m-0">
+            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/ripemango_icon.png"></div>
+            <div class="col text-center align-self-center">
+                <p class="text-start">Ripe Mango</p>
+                <p class="text-start">Total:</p>
+            </div>
+            <div class="col-3 text-center align-self-center">
+                <p id="ripe-total">0</p>
+            </div>
+        </div>
+        <div class="row body m-0 pt-2 pb-4">
+            <div class="col text-center mx-auto pt-2 pb-2 ms-2">
+                <div>
+                    <p>Small</p>
+                    <p id="ripe-small">0</p>
+                </div>
+            </div>
+            <div class="col text-center mx-auto pt-2 pb-2">
+                <div>
+                    <p>Medium</p>
+                    <p id="ripe-medium">0</p>
+                </div>
+            </div>
+            <div class="col text-center mx-auto pt-2 pb-2 me-2">
+                <div>
+                    <p>Large</p>
+                    <p id="ripe-large">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row head m-0">
+            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/decaymango_icon.png"></div>
+            <div class="col text-center align-self-center">
+                <p class="text-start">Decay Mango</p>
+                <p class="text-start">Total:</p>
+            </div>
+            <div class="col-3 text-center align-self-center">
+                <p id="decay-total">0</p>
+            </div>
+        </div>
+        <div class="row body last m-0 pt-2 pb-4">
+            <div class="col">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="toast fade hide" role="alert" data-bs-delay="3000" id="toast-1">
+        <p class="text-center mb-0 mt-0 pt-1 pb-1"><img src="assets/img/mangosort_icon.png" class="me-1">Dashboard</p>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="assets/js/db-init.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

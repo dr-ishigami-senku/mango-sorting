@@ -9,9 +9,74 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <div class="container-fluid"></div>
+<body class="bg1" oncontextmenu="return false;">
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img class="navbar-img" src="assets/img/mangosort_icon.png"><a class="navbar-brand" href="#">Carabao Mango Sorting</a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-1">
+                <div class="d-flex justify-content-center align-items-center db-header ps-3 pe-3 bg1"><img class="img-fluid db-img" src="assets/img/mangosort_icon.png" width="41" height="41">
+                    <h4 class="fw-bold">Carabao Mango Data</h4>
+                </div>
+                <div class="container mt-3">
+                    <p>Main</p><a class="d-block mb-3" href="dashboard.html"><img class="img-fluid me-2 invert" src="assets/img/dashboard_icon.png">Dashboard</a><a class="d-block" href="#"><img class="img-fluid me-2" src="assets/img/decaymango_icon.png">Mango Table Data</a>
+                    <hr>
+                    <p>Profile</p><a class="d-block" href="/"><img class="img-fluid me-2 invert" src="assets/img/signout_icon.png">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h4 class="fw-semibold text-center table-heading pt-2 pb-2">Mango Table Data</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="border-top-left-radius: 10px;">Mango Size(grams)</th>
+                        <th style="border-top-right-radius: 10px;">Percentage<br>(Quality)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Small</td>
+                        <td>200g - 249g</td>
+                        <td rowspan="3" style="border-bottom-right-radius: 10px;">Detect up to 0.8<br>up</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>250g - 299g</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom-left-radius: 10px;">Large</td>
+                        <td>300g Up</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="border-top-left-radius: 10px;">No.</th>
+                        <th>Weight(g)</th>
+                        <th>Size</th>
+                        <th>Percentage</th>
+                        <th style="border-top-right-radius: 10px;">Quality</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div><button class="btn btn-primary print-btn" type="button">Print Table Data</button>
+    <div class="toast fade hide" role="alert" data-bs-delay="3000" id="toast-1">
+        <p class="text-center mb-0 mt-0 pt-1 pb-1"><img src="assets/img/mangosort_icon.png" class="me-1">Mango Table Data</p>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="assets/js/db-init.js"></script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
