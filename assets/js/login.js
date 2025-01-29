@@ -20,7 +20,7 @@ const signInButton = document.getElementById("signInButton");
 signInButton.addEventListener("click", function() {
   firebase.auth().signInWithEmailAndPassword(email.value, passwordInput.value)
     .then(function() {
-      window.location.href = "dashboard.html";
+      window.location.href = "/dashboard.html";
     })
     .catch(function(error) {
         var toastElement = document.getElementById('toast-error');
