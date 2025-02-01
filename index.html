@@ -34,6 +34,16 @@
     <div class="toast fade error hide" role="alert" data-bs-delay="3000" id="toast-error">
         <p class="text-center mb-0 mt-0 pt-1 pb-1"><img src="assets/img/mangosort_icon.png" class="me-1">Invalid Username or Password</p>
     </div>
+    <div class="modal fade" role="dialog" tabindex="-1" data-bs-backdrop="static" id="modal-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="fw-semibold m-0">No internet connection available</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="exitButton" type="button">Exit</button><button class="btn btn-primary" id="refreshButton" type="button">Refresh</button></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
@@ -42,6 +52,7 @@
     <script src="assets/js/db-init.js"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/conn.js"></script>
 </body>
 
 </html>
