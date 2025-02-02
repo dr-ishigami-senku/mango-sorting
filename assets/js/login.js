@@ -23,8 +23,8 @@ signInButton.addEventListener("click", function() {
         window.location.href = "dashboard.html";
     })
     .catch(function(error) {
-        var toastElement = document.getElementById('toast-error');
-        var toast = new bootstrap.Toast(toastElement);
+        const toastElement = document.getElementById('toast-error');
+        const toast = new bootstrap.Toast(toastElement);
         toast.show();
     });
 });

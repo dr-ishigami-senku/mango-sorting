@@ -90,7 +90,7 @@ body {
   border-radius: 50px;
 }
 
-/* Dashboard Navbar */
+/* Navbar */
 
 .navbar {
   background-color: #ffff00 !important;
@@ -109,7 +109,7 @@ body {
   font-weight: 400;
 }
 
-/* Dashboard Sidebar */
+/* Sidebar */
 
 #offcanvas-1 {
   width: 85%;
@@ -183,7 +183,23 @@ body {
   border-radius: 0 0 15px 15px;
 }
 
-/* Table */
+/* Merchants Body */
+
+.merchants-table td:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  width: 70%;
+}
+
+.merchants-table td:last-child {
+  width: 30%;
+}
+
+.merchants-table td button {
+  font-size: 14px;
+}
+
+/* Table Body */
 
 .table-heading {
   background-color: #ffff00;
@@ -196,7 +212,7 @@ th {
 }
 
 td {
-  border: rgba(255,255,0,0.5);
+  border: 0;
 }
 
 th, td {

@@ -1,27 +1,31 @@
-const ref = database.ref('/');
+const nameElement = document.getElementById('db-name');
+
+if (nameElement && localStorage.getItem('name')) {
+  nameElement.innerText = localStorage.getItem('name') + "'s";
+};
+
+const ref = database.ref('merchants/'+ localStorage.getItem('name') +'/');
+
 ref.on("value", function (snapshot) {
     const data = snapshot.val();
     
-    var rawTotal = document.getElementById("raw-total");
-    var rawSmall = document.getElementById("raw-small");
-    var rawMedium = document.getElementById("raw-medium");
-    var rawLarge = document.getElementById("raw-large");
-    var ripeTotal = document.getElementById("ripe-total");
-    var ripeSmall = document.getElementById("ripe-small");
-    var ripeMedium = document.getElementById("ripe-medium");
-    var ripeLarge = document.getElementById("ripe-large");
-    var decayTotal = document.getElementById("decay-total");
+    const rawTotal = document.getElementById("raw-total");
+    const rawSmall = document.getElementById("raw-small");
+    const rawMedium = document.getElementById("raw-medium");
+    const rawLarge = document.getElementById("raw-large");
+    const ripeTotal = document.getElementById("ripe-total");
+    const ripeSmall = document.getElementById("ripe-small");
+    const ripeMedium = document.getElementById("ripe-medium");
+    const ripeLarge = document.getElementById("ripe-large");
+    const decayTotal = document.getElementById("decay-total");
 
-    rawTotal.innerText = data.raw.overall.total;
-    rawSmall.innerText = data.raw.overall.small;
-    rawMedium.innerText = data.raw.overall.medium;
-    rawLarge.innerText = data.raw.overall.large;
-    ripeTotal.innerText = data.ripe.overall.total;
-    ripeSmall.innerText = data.ripe.overall.small;
-    ripeMedium.innerText = data.ripe.overall.medium;
-    ripeLarge.innerText = data.ripe.overall.large;
-    decayTotal.innerText = data.decay.overall.total;
-    
-}, function (error) {
-    console.log("Error: " + error.code);
+    rawTotal.innerText = data.unripe.total;
+    rawSmall.innerText = data.unripe.small;
+    rawMedium.innerText = data.unripe.medium;
+    rawLarge.innerText = data.unripe.large;
+    ripeTotal.innerText = data.ripe.total;
+    ripeSmall.innerText = data.ripe.small;
+    ripeMedium.innerText = data.ripe.medium;
+    ripeLarge.innerText = data.ripe.large;
+    decayTotal.innerText = data.decay;   
 });

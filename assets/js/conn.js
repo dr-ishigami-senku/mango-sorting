@@ -1,5 +1,5 @@
 if (!navigator.onLine) {
-  var myModal = new bootstrap.Modal(document.getElementById('modal-1'));
+  const myModal = new bootstrap.Modal(document.getElementById('modal-1'));
   myModal.show();
 }
 

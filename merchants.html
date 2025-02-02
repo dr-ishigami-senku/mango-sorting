@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+    <title>MangoApp</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body oncontextmenu="return false;">
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img class="navbar-img" src="assets/img/mangosort_icon.png"><a class="navbar-brand" href="#">Carabao Mango Sorting</a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-1">
+                <div class="d-flex justify-content-center align-items-center db-header ps-3 pe-3 bg1"><img class="img-fluid db-img" src="assets/img/mangosort_icon.png" width="41" height="41">
+                    <h4 class="fw-bold">Carabao Mango Data</h4>
+                </div>
+                <div class="container mt-3">
+                    <p>Main</p><a class="d-block mb-3" href="dashboard.html"><img class="img-fluid me-2 invert" src="assets/img/dashboard_icon.png">Dashboard</a><a class="d-block mb-3" href="#"><img class="img-fluid me-2" src="assets/img/merchants.png">Merchants</a><a class="d-block" href="table.html"><img class="img-fluid me-2" src="assets/img/decaymango_icon.png">Mango Table Data</a>
+                    <hr>
+                    <p>Profile</p><a class="d-block" href="/"><img class="img-fluid me-2 invert" src="assets/img/signout_icon.png">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center">
+        <div class="d-flex justify-content-center align-items-center mt-2"><input type="text" id="inputData" class="me-3 text-capitalize"><button class="btn btn-primary ms-0" id="insertBtn" type="button" style="font-size: 12px;">Insert</button></div>
+        <div class="table-responsive mt-2 merchants-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Merchants' Names</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="assets/js/toast.js"></script>
+    <script src="assets/js/db-init.js"></script>
+    <script src="assets/js/merchant.js"></script>
+    <script src="assets/js/insert.js"></script>
+</body>
+
+</html>
