@@ -199,6 +199,13 @@ body {
   font-size: 14px;
 }
 
+.merchant-signout {
+  color: #000000;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
 /* Table Body */
 
 .table-heading {

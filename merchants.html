@@ -15,9 +15,9 @@
     </nav>
     <div class="container text-center">
         <div class="d-flex justify-content-center align-items-center mt-2"><input type="text" id="inputData" class="me-3 text-capitalize"><button class="btn btn-primary ms-0" id="insertBtn" type="button" style="font-size: 12px;">Insert</button></div>
-        <div class="table-responsive mt-2 merchants-table">
+        <div class="table-responsive mt-2 merchants-table" style="max-height: 70vh;">
             <table class="table">
-                <thead>
+                <thead class="sticky-top">
                     <tr>
                         <th colspan="2">Merchants' Names</th>
                     </tr>
@@ -25,7 +25,7 @@
                 <tbody></tbody>
             </table>
         </div>
-    </div>
+    </div><a class="d-block merchant-signout" href="index.html"><img class="me-2 invert" src="assets/img/signout_icon.png" width="27px">Sign Out</a>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
