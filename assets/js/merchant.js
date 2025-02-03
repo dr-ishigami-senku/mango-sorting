@@ -53,6 +53,7 @@ merchantsRef.on('value', function (snapshot) {
                 archive: true
             };
             database.ref(nodePath).update(updatedData);
+            currentButton = null;
         };
         const modal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
         modal.hide();
