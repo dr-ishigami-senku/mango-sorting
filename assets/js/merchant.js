@@ -31,16 +31,31 @@ merchantsRef.on('value', function (snapshot) {
     });
 
     const updateButtons = document.querySelectorAll(".archive-btn");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+    const confirmBtn = document.getElementById("confirmBtn");
+    let currentButton = null;
 
     updateButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const nodeId = button.getAttribute("data-node");
+        button.addEventListener("click", (event) => {
+            currentButton = event.currentTarget;
+            const nodeName = currentButton.getAttribute("data-node");
+            confirmationMessage.textContent = `Do you want to archive "${nodeName}"?`;
+            const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            modal.show();
+        });
+    });
+
+    confirmBtn.addEventListener("click", () => {
+        if (currentButton) {
+            const nodeId = currentButton.getAttribute("data-node");
             const nodePath = `merchants/${nodeId}`;
             const updatedData = {
                 archive: true
             };
             database.ref(nodePath).update(updatedData);
-        });
+        };
+        const modal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
+        modal.hide();
     });
 
     const links = document.querySelectorAll('td.ps-5');

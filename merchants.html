@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body oncontextmenu="return false;">
+<body class="bg1" oncontextmenu="return false;">
     <nav class="navbar navbar-expand-md bg-body">
         <div class="container-fluid d-flex justify-content-center"><img class="navbar-img me-1" src="assets/img/mangosort_icon.png"><a class="navbar-brand me-0 ms-1" href="#">Carabao Mango Sorting</a></div>
     </nav>
@@ -26,6 +26,16 @@
             </table>
         </div>
     </div><a class="d-block merchant-signout" href="index.html"><img class="me-2 invert" src="assets/img/signout_icon.png" width="27px">Sign Out</a>
+    <div class="modal fade" role="dialog" tabindex="-1" id="confirmationModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="fw-semibold" id="confirmationMessage">Do you want to archive</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">No</button><button class="btn btn-primary" id="confirmBtn" type="button">Yes</button></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
