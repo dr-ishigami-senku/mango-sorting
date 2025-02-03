@@ -2,7 +2,7 @@ const input = document.getElementById("inputData");
 const insertBtn = document.getElementById('insertBtn');
 
 insertBtn.addEventListener('click', function() {
-  const insertRef = database.ref('merchants/' + input.value);
+  const insertRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1));
   insertRef.set({
     archive: false,
     unripe: {
