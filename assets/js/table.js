@@ -1,7 +1,7 @@
 const nameElement = document.getElementById('table-name');
 
 if (nameElement && localStorage.getItem('name')) {
-  nameElement.innerText = localStorage.getItem('name') + "'s";
+    nameElement.innerText = localStorage.getItem('name') + "'s";
 };
 
 const itemsRef = database.ref('merchants/'+ localStorage.getItem('name') +'/table/');

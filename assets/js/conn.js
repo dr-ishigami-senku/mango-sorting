@@ -1,12 +1,12 @@
 if (!navigator.onLine) {
-  const myModal = new bootstrap.Modal(document.getElementById('modal-1'));
-  myModal.show();
-}
+    const myModal = new bootstrap.Modal(document.getElementById('modal-1'));
+    myModal.show();
+};
 
 document.getElementById('refreshButton').addEventListener('click', function() {
-  location.reload();
+    location.reload();
 });
 
 document.getElementById('exitButton').addEventListener('click', function() {
-  Website2APK.exitApp();
+    Website2APK.exitApp();
 });

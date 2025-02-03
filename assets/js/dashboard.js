@@ -1,14 +1,14 @@
 const nameElement = document.getElementById('db-name');
 
 if (nameElement && localStorage.getItem('name')) {
-  nameElement.innerText = localStorage.getItem('name') + "'s";
+    nameElement.innerText = localStorage.getItem('name') + "'s";
 };
 
 const ref = database.ref('merchants/'+ localStorage.getItem('name') +'/');
 
 ref.on("value", function (snapshot) {
     const data = snapshot.val();
-    
+
     const rawTotal = document.getElementById("raw-total");
     const rawSmall = document.getElementById("raw-small");
     const rawMedium = document.getElementById("raw-medium");
