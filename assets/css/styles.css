@@ -34,7 +34,7 @@ body {
   border-radius: 25px 25px 0 0;
 }
 
-.card, .card *:not(.form-check-input) {
+.card, .card * {
   width: 100%;
 }
 
@@ -70,6 +70,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  color: #000000;
+}
+
+.bi.bi-check2 {
+  color: black;
 }
 
 .bi.bi-check2, #togglePassword {
@@ -79,21 +84,15 @@ body {
   width: 5%;
 }
 
-.form-check-label {
-  color: rgb(120,109,109);
-  font-size: 13px;
-}
-
 .mb-3 .btn {
-  background-color: #ffff00;
-  color: #000000;
   border-radius: 50px;
 }
 
 /* Navbar */
 
 .navbar {
-  background-color: #ffff00 !important;
+  background-color: rgba(255,255,0,0) !important;
+  border-bottom: 5px dotted yellow;
 }
 
 .navbar-toggler {
@@ -140,7 +139,7 @@ body {
 /* Dashboard Body */
 
 .img-fluid:not(#offcanvas-1 img) {
-  background-color: #ffff00;
+  background-color: #ebeff2;
 }
 
 .row.head {
@@ -209,13 +208,13 @@ body {
 /* Table Body */
 
 .table-heading {
-  background-color: #ffff00;
+  background-color: rgba(255,255,0,0.5) !important;
   border-radius: 50px;
   font-size: 18px;
 }
 
 th {
-  background-color: #ffff00 !important;
+  background-color: rgba(255,255,0,0.5) !important;
 }
 
 td {
@@ -240,8 +239,6 @@ th, td {
   position: absolute;
   right: 5%;
   bottom: 5%;
-  background-color: #ffff00;
-  color: #000000;
   border: 0;
   font-weight: 600;
   font-size: 14px;
