@@ -41,7 +41,9 @@ insertBtn.addEventListener('click', function () {
                             large: 7,
                             total: 8
                         },
-                        decay: 9
+                        decay: {
+                            total: 9
+                        }
                     });
                 }
             } else {
@@ -71,7 +73,9 @@ insertBtn.addEventListener('click', function () {
                         large: 7,
                         total: 8
                     },
-                    decay: 9
+                    decay: {
+                        total: 9
+                    }
                 });
             }
         });

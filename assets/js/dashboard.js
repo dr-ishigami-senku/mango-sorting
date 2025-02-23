@@ -38,7 +38,7 @@ ref.on('value', (snapshot) => {
             const ripeSmallValue = historyData[date].ripe.small;
             const ripeMediumValue = historyData[date].ripe.medium;
             const ripeLargeValue = historyData[date].ripe.large;
-            const decayTotalValue = historyData[date].decay;
+            const decayTotalValue = historyData[date].decay.total;
         
             rawTotal.textContent = `${rawTotalValue}`;
             rawSmall.textContent = `${rawSmallValue}`;
