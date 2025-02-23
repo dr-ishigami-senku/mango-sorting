@@ -29,7 +29,7 @@ insertBtn.addEventListener('click', function () {
                     const historyRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/history/' + today +'/');
 
                     historyRef.set({
-                        unripe: {
+                        raw: {
                             small: 1,
                             medium: 2,
                             large: 3,
@@ -59,7 +59,7 @@ insertBtn.addEventListener('click', function () {
                 const historyRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/history/' + today +'/');
 
                 historyRef.set({
-                    unripe: {
+                    raw: {
                         small: 1,
                         medium: 2,
                         large: 3,
