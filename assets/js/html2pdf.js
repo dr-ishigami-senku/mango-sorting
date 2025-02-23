@@ -4,7 +4,7 @@ const dashboardText = document.createElement('p');
 dashboardText.classList.add("text-center", "fs-4");
 const combinedContainer = document.createElement('div');
 
-downloadBtn.addEventListener('click', function() {
+downloadBtn.addEventListener('click', function () {
     dashboardText.textContent = localStorage.getItem("name") + "'s Table";
     combinedContainer.appendChild(dashboardText.cloneNode(true));
     combinedContainer.appendChild(elementDl.cloneNode(true));

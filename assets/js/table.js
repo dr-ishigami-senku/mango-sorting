@@ -4,7 +4,7 @@ if (nameElement && localStorage.getItem('name')) {
     nameElement.innerText = localStorage.getItem('name') + "'s";
 };
 
-const itemsRef = database.ref('merchants/'+ localStorage.getItem('name') +'/table/');
+const itemsRef = database.ref('merchants/' + localStorage.getItem('name') + '/table/');
 const tableBody = document.querySelector('.table-responsive:nth-of-type(2) .table tbody');
 
 itemsRef.on('value', function (snapshot) {

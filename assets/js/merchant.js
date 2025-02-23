@@ -55,8 +55,6 @@ merchantsRef.on('value', function (snapshot) {
             database.ref(nodePath).update(updatedData);
             currentButton = null;
         };
-        const modal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
-        modal.hide();
     });
 
     const links = document.querySelectorAll('td.ps-5');

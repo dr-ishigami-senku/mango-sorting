@@ -27,7 +27,7 @@ body {
 }
 
 .login-container {
-  background-color: rgba(255,255,0,0.5);
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .card {
@@ -40,7 +40,7 @@ body {
 
 .card-body p {
   font-size: 13px;
-  color: rgb(120,109,109);
+  color: rgb(120, 109, 109);
 }
 
 .form-label {
@@ -91,7 +91,7 @@ body {
 /* Navbar */
 
 .navbar {
-  background-color: rgba(255,255,0,0) !important;
+  background-color: rgba(255, 255, 0, 0) !important;
   border-bottom: 5px dotted yellow;
 }
 
@@ -137,6 +137,11 @@ body {
 }
 
 /* Dashboard Body */
+
+.dropdown-menu {
+  max-height: 50vh;
+  overflow: scroll;
+}
 
 .img-fluid:not(#offcanvas-1 img) {
   background-color: #ebeff2;
@@ -208,13 +213,13 @@ body {
 /* Table Body */
 
 .table-heading {
-  background-color: rgba(255,255,0,0.5) !important;
+  background-color: rgba(255, 255, 0, 0.5) !important;
   border-radius: 50px;
   font-size: 18px;
 }
 
 th {
-  background-color: rgba(255,255,0,0.5) !important;
+  background-color: rgba(255, 255, 0, 0.5) !important;
 }
 
 td {

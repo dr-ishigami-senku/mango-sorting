@@ -3,10 +3,10 @@ if (!navigator.onLine) {
     myModal.show();
 };
 
-document.getElementById('refreshButton').addEventListener('click', function() {
+document.getElementById('refreshButton').addEventListener('click', function () {
     location.reload();
 });
 
-document.getElementById('exitButton').addEventListener('click', function() {
+document.getElementById('exitButton').addEventListener('click', function () {
     Website2APK.exitApp();
 });
