@@ -28,7 +28,6 @@ ref.on('value', (snapshot) => {
         menuItem.classList.add('dropdown-item');
         menuItem.textContent = date;
         menuItem.addEventListener('click', () => {
-            dropdownButton.textContent = date;
             const rawTotalValue = historyData[date].raw.total;
             const rawSmallValue = historyData[date].raw.small;
             const rawMediumValue = historyData[date].raw.medium;
