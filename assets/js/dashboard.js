@@ -70,9 +70,9 @@ ref.on('value', (snapshot) => {
     if (matchingItem) {
         matchingItem.click();
     } else {
-        const firstMenuItem = dropdownMenu.querySelector('.dropdown-item');
-        if (firstMenuItem) {
-            firstMenuItem.click();
+        const lastMenuItem = dropdownMenu.querySelector('.dropdown-item:last-child');
+        if (lastMenuItem) {
+            lastMenuItem.click();
         }
     }
 });
