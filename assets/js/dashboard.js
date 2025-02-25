@@ -23,7 +23,6 @@ ref.on('value', (snapshot) => {
 
     dropdownMenu.innerHTML = "";
 
-    dropdownButton.textContent = dates[0];
     dates.forEach((date) => {
         const menuItem = document.createElement('a');
         menuItem.classList.add('dropdown-item');
