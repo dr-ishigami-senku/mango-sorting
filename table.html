@@ -73,21 +73,15 @@
                                 <table class="table my-0 data-table" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>Weight(g)</th>
-                                            <th>Size</th>
-                                            <th>Percentage</th>
-                                            <th>Quality</th>
+                                            <th class="text-center">No.</th>
+                                            <th class="text-center">Weight(g)</th>
+                                            <th class="text-center">Size</th>
+                                            <th class="text-center">Percentage</th>
+                                            <th class="text-center">Quality</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>205</td>
-                                            <td>Small</td>
-                                            <td>70%</td>
-                                            <td>Ripe</td>
-                                        </tr>
+                                        <tr></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -96,10 +90,10 @@
                 </div>
             </div>
         </div>
-    </div><button class="btn btn-primary print-btn" id="download-btn" type="button">Print Table Data</button>
+    </div>
     <div class="toast fade hide" role="alert" data-bs-delay="3000" id="toast-1">
         <p class="text-center mb-0 mt-0 pt-1 pb-1"><img src="assets/img/mangosort_icon.png" class="me-1">Mango Table Data</p>
-    </div>
+    </div><button class="btn btn-primary btn-sm d-sm-inline-block print-btn" id="download-btn" type="button"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</button>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
