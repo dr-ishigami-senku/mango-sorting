@@ -4,28 +4,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
-    <title>MangoApp</title>
+    <title>Profile - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg1" oncontextmenu="return false;">
-    <nav class="navbar navbar-expand-md bg-body">
-        <div class="container-fluid d-flex justify-content-center"><img class="navbar-img me-1" src="assets/img/mangosort_icon.png"><a class="navbar-brand me-0 ms-1" href="#">Carabao Mango Sorting</a></div>
-    </nav>
-    <div class="container text-center">
-        <div class="d-flex justify-content-center align-items-center mt-2"><input type="text" id="inputData" class="me-3 text-capitalize"><button class="btn btn-primary ms-0" id="insertBtn" type="button" style="font-size: 12px;">Insert</button></div>
-        <div class="table-responsive mt-2 merchants-table" style="max-height: 70vh;">
-            <table class="table">
-                <thead class="sticky-top">
-                    <tr>
-                        <th colspan="2">Merchants' Names</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+<body oncontextmenu="return false;">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-end mx-auto"><img src="assets/img/mangosort_icon.png">
+                            <h3>Carabao Mango Sorting</h3>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="input-group"><input class="bg-light border-0 form-control small text-capitalize" type="text" id="inputData" placeholder="Insert merchant name..."><button class="btn btn-primary" id="insertBtn" type="button"><i class="fas fa-plus"></i></button></div>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold">List of Merchants</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2 merchants-table" id="dataTable-1" role="grid" aria-describedby="dataTable_info" style="max-height: 70vh;">
+                                <table class="table my-0" id="dataTable">
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div><a class="d-block merchant-signout" href="index.html"><img class="me-2 invert" src="assets/img/signout_icon.png" width="27px">Sign Out</a>
+    </div><a class="d-flex align-items-center merchant-signout" href="index.html"><i class="fas fa-sign-out-alt me-1 mb-0" style="font-size:20px;"></i><span>Logout</span></a>
     <div class="modal fade" role="dialog" tabindex="-1" id="confirmationModal">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -58,6 +72,7 @@
     <script src="assets/js/db-init.js"></script>
     <script src="assets/js/merchant.js"></script>
     <script src="assets/js/insert.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>

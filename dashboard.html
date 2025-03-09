@@ -4,105 +4,150 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
-    <title>MangoApp</title>
+    <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg1" oncontextmenu="return false;">
-    <nav class="navbar navbar-expand-md bg-body">
-        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img class="navbar-img" src="assets/img/mangosort_icon.png"><a class="navbar-brand" href="#">Carabao Mango Sorting</a>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-1">
-                <div class="d-flex justify-content-center align-items-center db-header ps-3 pe-3 bg1"><img class="img-fluid db-img" src="assets/img/mangosort_icon.png" width="41" height="41">
-                    <h4 class="fw-bold">Carabao Mango Data</h4>
+<body oncontextmenu="return false;">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><img src="assets/img/mangosort_icon.png"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="merchants.html"><i class="fas fa-users"></i><span>Merchants</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button></div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0" id="db-name">Dashboard</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                    </div>
+                    <div class="dropdown mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="dropdownMenuButton" type="button"></button>
+                        <div class="dropdown-menu position-absolute" id="dropdownMenu"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4 flip-card">
+                            <div class="flip-card-inner">
+                                <div class="card shadow border-left-primary py-2 flip-card-front">
+                                    <div class="card-body">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col me-2">
+                                                <div class="text-uppercase fw-bold text-primary text-xs mb-1"><span>Unripe Mango<br>Total</span></div>
+                                                <div class="fw-bold text-dark h5 mb-0"><span id="raw-total">0</span></div>
+                                            </div>
+                                            <div class="col-auto"><img src="assets/img/rawmango_icon.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card shadow border-right-primary py-2 flip-card-back">
+                                    <div class="card-body">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-auto"><img src="assets/img/rawmango_icon.png" style="transform: rotateY(180deg);"></div>
+                                            <div class="col me-2">
+                                                <div class="row gx-0">
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>S</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>M</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>L</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-0">
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="raw-small">0</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="raw-medium">0</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="raw-large">0</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4 flip-card">
+                            <div class="flip-card-inner">
+                                <div class="card shadow border-left-success py-2 flip-card-front">
+                                    <div class="card-body">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col me-2">
+                                                <div class="text-uppercase fw-bold text-primary text-xs mb-1"><span>Ripe Mango<br>Total</span></div>
+                                                <div class="fw-bold text-dark h5 mb-0"><span id="ripe-total">0</span></div>
+                                            </div>
+                                            <div class="col-auto"><img src="assets/img/ripemango_icon.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card shadow border-right-success py-2 flip-card-back">
+                                    <div class="card-body">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-auto"><img src="assets/img/ripemango_icon.png" style="transform: rotateY(180deg);"></div>
+                                            <div class="col me-2">
+                                                <div class="row gx-0">
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>S</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>M</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="text-uppercase fw-bold text-center text-primary text-xs mb-1"><span>L</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-0">
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="ripe-small">0</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="ripe-medium">0</span></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="fw-bold text-center text-dark h5 mb-0"><span id="ripe-large">0</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-info py-2">
+                                <div class="card-body">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase fw-bold text-primary text-xs mb-1"><span>Decay Mango<br>Total</span></div>
+                                            <div class="fw-bold text-dark h5 mb-0"><span id="decay-total">0</span></div>
+                                        </div>
+                                        <div class="col-auto"><img src="assets/img/decaymango_icon.png"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="container mt-3">
-                    <p>Main</p><a class="d-block mb-3" href="table.html"><img class="img-fluid me-2" src="assets/img/decaymango_icon.png">Mango Table Data</a><a class="d-block mb-3" href="merchants.html"><img class="img-fluid me-2" src="assets/img/merchants.png">Merchants</a>
-                    <hr>
-                    <p>Profile</p><a class="d-block" href="index.html"><img class="img-fluid me-2 invert" src="assets/img/signout_icon.png">Sign Out</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <h1 class="text-capitalize text-center mb-0 mt-2" id="db-name"></h1>
-    <h6 class="text-center mb-0">Dashboard</h6>
-    <div class="dropdown"><button class="btn btn-primary dropdown-toggle mt-3 ms-3" aria-expanded="false" data-bs-toggle="dropdown" id="dropdownMenuButton" type="button"></button>
-        <div class="dropdown-menu" id="dropdownMenu"></div>
-    </div>
-    <div class="container mt-3">
-        <div class="row head m-0">
-            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/rawmango_icon.png"></div>
-            <div class="col text-center align-self-center">
-                <p class="text-start">Unripe Mango</p>
-                <p class="text-start">Total:</p>
-            </div>
-            <div class="col-3 text-center align-self-center">
-                <p id="raw-total">0</p>
-            </div>
-        </div>
-        <div class="row body m-0 pt-2 pb-4">
-            <div class="col text-center mx-auto pt-2 pb-2 ms-2">
-                <div>
-                    <p>Small</p>
-                    <p id="raw-small">0</p>
-                </div>
-            </div>
-            <div class="col text-center mx-auto pt-2 pb-2">
-                <div>
-                    <p>Medium</p>
-                    <p id="raw-medium">0</p>
-                </div>
-            </div>
-            <div class="col text-center mx-auto pt-2 pb-2 me-2">
-                <div>
-                    <p>Large</p>
-                    <p id="raw-large">0</p>
-                </div>
-            </div>
-        </div>
-        <div class="row head m-0">
-            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/ripemango_icon.png"></div>
-            <div class="col text-center align-self-center">
-                <p class="text-start">Ripe Mango</p>
-                <p class="text-start">Total:</p>
-            </div>
-            <div class="col-3 text-center align-self-center">
-                <p id="ripe-total">0</p>
-            </div>
-        </div>
-        <div class="row body m-0 pt-2 pb-4">
-            <div class="col text-center mx-auto pt-2 pb-2 ms-2">
-                <div>
-                    <p>Small</p>
-                    <p id="ripe-small">0</p>
-                </div>
-            </div>
-            <div class="col text-center mx-auto pt-2 pb-2">
-                <div>
-                    <p>Medium</p>
-                    <p id="ripe-medium">0</p>
-                </div>
-            </div>
-            <div class="col text-center mx-auto pt-2 pb-2 me-2">
-                <div>
-                    <p>Large</p>
-                    <p id="ripe-large">0</p>
-                </div>
-            </div>
-        </div>
-        <div class="row head m-0">
-            <div class="col-3 align-self-center ps-0"><img class="img-fluid" src="assets/img/decaymango_icon.png"></div>
-            <div class="col text-center align-self-center">
-                <p class="text-start">Decay Mango</p>
-                <p class="text-start">Total:</p>
-            </div>
-            <div class="col-3 text-center align-self-center">
-                <p id="decay-total">0</p>
-            </div>
-        </div>
-        <div class="row body last m-0 pt-2 pb-4">
-            <div class="col">
-                <div></div>
             </div>
         </div>
     </div>
@@ -117,6 +162,7 @@
     <script src="assets/js/toast.js"></script>
     <script src="assets/js/db-init.js"></script>
     <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>

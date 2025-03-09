@@ -1,7 +1,7 @@
 const nameElement = document.getElementById('db-name');
 
 if (nameElement && localStorage.getItem('name')) {
-    nameElement.innerText = localStorage.getItem('name') + "'s";
+    nameElement.innerText = localStorage.getItem('name') + "'s Dashboard";
 };
 
 const dropdownButton = document.getElementById('dropdownMenuButton');
@@ -73,4 +73,17 @@ ref.on('value', (snapshot) => {
             lastMenuItem.click();
         }
     }
+});
+
+
+const flipCards = document.querySelectorAll('.flip-card');
+
+flipCards.forEach(flipCard => {
+  flipCard.addEventListener('click', () => {
+    const flipCardInner = flipCard.querySelector('.flip-card-inner');
+    
+    if (flipCardInner) {
+      flipCardInner.classList.toggle('flipped');
+    }
+  });
 });

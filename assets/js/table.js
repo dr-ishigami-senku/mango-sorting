@@ -1,11 +1,11 @@
 const nameElement = document.getElementById('table-name');
 
 if (nameElement && localStorage.getItem('name')) {
-    nameElement.innerText = localStorage.getItem('name') + "'s";
+    nameElement.innerText = localStorage.getItem('name') + "'s Table";
 };
 
 const itemsRef = database.ref('merchants/' + localStorage.getItem('name') + '/table/');
-const tableBody = document.querySelector('.table-responsive:nth-of-type(2) .table tbody');
+const tableBody = document.querySelector('.card.shadow:nth-of-type(2) .table tbody');
 
 itemsRef.on('value', function (snapshot) {
     tableBody.innerHTML = '';

@@ -4,68 +4,97 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
-    <title>MangoApp</title>
+    <title>Table - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg1" oncontextmenu="return false;">
-    <nav class="navbar navbar-expand-md bg-body">
-        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img class="navbar-img" src="assets/img/mangosort_icon.png"><a class="navbar-brand" href="#">Carabao Mango Sorting</a>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-1">
-                <div class="d-flex justify-content-center align-items-center db-header ps-3 pe-3 bg1"><img class="img-fluid db-img" src="assets/img/mangosort_icon.png" width="41" height="41">
-                    <h4 class="fw-bold">Carabao Mango Data</h4>
-                </div>
-                <div class="container mt-3">
-                    <p>Main</p><a class="d-block mb-3" href="dashboard.html"><img class="img-fluid me-2 invert" src="assets/img/dashboard_icon.png">Dashboard</a><a class="d-block mb-3" href="merchants.html"><img class="img-fluid me-2" src="assets/img/merchants.png">Merchants</a>
-                    <hr>
-                    <p>Profile</p><a class="d-block" href="index.html"><img class="img-fluid me-2 invert" src="assets/img/signout_icon.png">Sign Out</a>
+<body oncontextmenu="return false;">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><img src="assets/img/mangosort_icon.png"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="merchants.html"><i class="fas fa-users"></i><span>Merchants</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button></div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4" id="table-name">Table</h3>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0 data-table" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Mango Size(grams)</th>
+                                            <th>Percentage(Quality)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Small</td>
+                                            <td>249g Down</td>
+                                            <td class="text-center" rowspan="3">Detect up to 0.8 Up</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium</td>
+                                            <td>250g - 299g</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large</td>
+                                            <td>300g Up</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mt-2" id="element-to-print">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold">Table Data</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info" style="max-height: 35vh;">
+                                <table class="table my-0 data-table" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Weight(g)</th>
+                                            <th>Size</th>
+                                            <th>Percentage</th>
+                                            <th>Quality</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>205</td>
+                                            <td>Small</td>
+                                            <td>70%</td>
+                                            <td>Ripe</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <h1 class="text-capitalize text-center mb-0 mt-2" id="table-name"></h1>
-    <h6 class="text-center mb-0">Table</h6>
-    <div class="container mt-3">
-        <h4 class="fw-semibold text-center table-heading pt-2 pb-2">Mango Table Data</h4>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th colspan="2" style="border-top-left-radius: 10px;">Mango Size(grams)</th>
-                        <th style="border-top-right-radius: 10px;">Percentage<br>(Quality)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Small</td>
-                        <td>200g - 249g</td>
-                        <td rowspan="3" style="border-bottom-right-radius: 10px;">Detect up to 0.8<br>up</td>
-                    </tr>
-                    <tr>
-                        <td>Medium</td>
-                        <td>250g - 299g</td>
-                    </tr>
-                    <tr>
-                        <td style="border-bottom-left-radius: 10px;">Large</td>
-                        <td>300g Up</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="table-responsive" id="element-to-print" style="max-height: 35vh;">
-            <table class="table">
-                <thead class="sticky-top">
-                    <tr>
-                        <th style="border-top-left-radius: 10px;">No.</th>
-                        <th>Weight(g)</th>
-                        <th>Size</th>
-                        <th>Percentage</th>
-                        <th style="border-top-right-radius: 10px;">Quality</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
         </div>
     </div><button class="btn btn-primary print-btn" id="download-btn" type="button">Print Table Data</button>
     <div class="toast fade hide" role="alert" data-bs-delay="3000" id="toast-1">
@@ -81,6 +110,7 @@
     <script src="assets/js/toast.js"></script>
     <script src="assets/js/db-init.js"></script>
     <script src="assets/js/table.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>

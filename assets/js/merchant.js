@@ -9,7 +9,7 @@ merchantsRef.on('value', function (snapshot) {
             const row = document.createElement("tr");
 
             const col1 = document.createElement("td");
-            col1.classList.add("text-start", "text-capitalize", "ps-5");
+            col1.classList.add("text-start", "text-capitalize");
             col1.innerText = item_snapshot.key;
 
             const col2 = document.createElement("td");
@@ -57,7 +57,7 @@ merchantsRef.on('value', function (snapshot) {
         };
     });
 
-    const links = document.querySelectorAll('td.ps-5');
+    const links = document.querySelectorAll('td.text-start');
 
     links.forEach(link => {
         link.addEventListener('click', (e) => {
