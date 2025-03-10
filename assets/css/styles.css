@@ -44,7 +44,9 @@ body {
 .dropdown-menu {
   max-height: 50vh;
   overflow: scroll;
-  width: auto!important;
+  max-width: 142px;
+  min-width: 0;
+  text-align: center;
 }
 
 .border-left-primary {
@@ -142,5 +144,12 @@ tr td {
   font-weight: 600;
   font-size: 14px;
   border-radius: 12px;
+}
+
+.far.fa-eye-slash, .far.fa-eye {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 

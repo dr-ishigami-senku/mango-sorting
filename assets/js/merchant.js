@@ -13,6 +13,7 @@ merchantsRef.on('value', function (snapshot) {
             col1.innerText = item_snapshot.key;
 
             const col2 = document.createElement("td");
+            col2.classList.add("text-end");
             const archBtn = document.createElement("button");
             archBtn.classList.add("btn", "btn-primary", "archive-btn");
             archBtn.type = "button";

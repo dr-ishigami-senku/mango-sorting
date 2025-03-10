@@ -7,9 +7,9 @@ if (togglePasswordButton && passwordInput) {
         passwordInput.setAttribute("type", type);
 
         if (type === "password") {
-            togglePasswordButton.innerHTML = '<i class="far fa-eye-slash" aria-hidden="true"></i>';
+            togglePasswordButton.className = 'far fa-eye-slash';
         } else {
-            togglePasswordButton.innerHTML = '<i class="far fa-eye" aria-hidden="true"></i>';
+            togglePasswordButton.className = 'far fa-eye';
         };
     });
 };
