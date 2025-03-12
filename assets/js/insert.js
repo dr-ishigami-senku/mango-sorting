@@ -11,7 +11,7 @@ function insertData() {
         }
     });
 
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: 'numeric', month: 'long', day: '2-digit' };
     const today = new Date().toLocaleDateString('en-US', options);
     const historyRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/history/' + today + '/');
 
