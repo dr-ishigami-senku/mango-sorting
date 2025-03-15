@@ -35,10 +35,13 @@
                 </nav>
                 <div class="container-fluid">
                     <h3 class="text-dark mb-4" id="table-name">Table</h3>
+                    <div class="dropdown mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="tableMenuButton" type="button"></button>
+                        <div class="dropdown-menu position-absolute" id="dropdownMenu"></div>
+                    </div>
                     <div class="card shadow">
                         <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                <table class="table my-0 data-table" id="dataTable">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0 data-table">
                                     <thead>
                                         <tr>
                                             <th colspan="2">Mango Size(grams)</th>
@@ -64,13 +67,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card shadow mt-2" id="element-to-print">
+                    <div class="card shadow mt-2">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold">Table Data</p>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info" style="max-height: 35vh;">
-                                <table class="table my-0 data-table" id="dataTable">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info" style="max-height: 35vh;">
+                                <table class="table my-0 data-table" id="element-to-print">
                                     <thead>
                                         <tr>
                                             <th class="text-center">No.</th>

@@ -2,20 +2,18 @@ const input = document.getElementById("inputData");
 const insertBtn = document.getElementById('insertBtn');
 
 function insertData() {
+    const options = { year: 'numeric', month: 'long', day: '2-digit' };
+    const today = new Date().toLocaleDateString('en-US', options);
+    
     const insertRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/');
 
     insertRef.set({
-        archive: false,
-        table: {
-            totalRow: 0
-        }
+        archive: false
     });
 
-    const options = { year: 'numeric', month: 'long', day: '2-digit' };
-    const today = new Date().toLocaleDateString('en-US', options);
-    const historyRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/history/' + today + '/');
+    const dashboardRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/dashboard/history/' + today + '/');
 
-    historyRef.set({
+    dashboardRef.set({
         raw: {
             small: 0,
             medium: 0,
@@ -32,6 +30,13 @@ function insertData() {
             total: 0
         }
     });
+    
+    const tableRef = database.ref('merchants/' + input.value.charAt(0).toUpperCase() + input.value.slice(1) + '/table/history/' + today + '/');
+    
+    tableRef.set({
+        totalRow: 0
+    });
+    
 };
 
 insertBtn.addEventListener('click', function () {

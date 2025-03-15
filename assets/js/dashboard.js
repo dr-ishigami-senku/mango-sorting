@@ -4,8 +4,8 @@ if (nameElement && localStorage.getItem('name')) {
     nameElement.innerText = localStorage.getItem('name') + "'s Dashboard";
 };
 
-const dropdownButton = document.getElementById('dropdownMenuButton');
-const ref = database.ref('merchants/' + localStorage.getItem('name') + '/history/');
+const dropdownButton = document.getElementById('dashboardMenuButton');
+const ref = database.ref('merchants/' + localStorage.getItem('name') + '/dashboard/history/');
 
 ref.on('value', (snapshot) => {
     const historyData = snapshot.val();
@@ -60,7 +60,7 @@ ref.on('value', (snapshot) => {
     });
     
     const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: 'numeric', month: 'long', day: '2-digit' };
     const todayFormatted = today.toLocaleDateString('en-US', options);
 
     const matchingItem = Array.from(dropdownMenu.querySelectorAll('.dropdown-item')).find(item => item.textContent === todayFormatted);
