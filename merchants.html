@@ -13,12 +13,27 @@
 
 <body oncontextmenu="return false;">
     <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><img src="assets/img/mangosort_icon.png"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="admin-dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="merchants.html"><i class="fas fa-users"></i><span>Merchants</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
                     <div class="container-fluid">
-                        <div class="d-flex align-items-end mx-auto"><img src="assets/img/mangosort_icon.png">
-                            <h3>Carabao Mango Sorting</h3>
+                        <div class="d-flex align-items-end mx-auto">
+                            <h5>Carabao Mango Sorting</h5>
                         </div>
                     </div>
                 </nav>
@@ -60,6 +75,33 @@
                     <p>Please insert a more unique name</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">OK</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="account-details">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="merchant-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-dark" id="email-reveal">Email:&nbsp;</p>
+                    <p class="text-dark mb-0" id="password-reveal">Password:&nbsp;</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">OK</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="create-account">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="create-title">Create New Account</h6>
+                </div>
+                <div class="modal-body"><input type="email" id="reg-email" class="w-100 mb-1" placeholder="Enter email... user@example.com">
+                    <div class="position-relative"><input type="password" id="reg-pword" class="w-100" placeholder="Enter password... xxxxxxxxx"><i class="far fa-eye-slash" id="togglePassword"></i></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" id="regBtn" type="button">Register</button></div>
             </div>
         </div>
     </div>

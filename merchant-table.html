@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><img src="assets/img/mangosort_icon.png"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="merchant-dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="merchant-table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button></div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4" id="table-name">Table</h3>
+                    <div class="dropdown mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="tableMenuButton" type="button"></button>
+                        <div class="dropdown-menu position-absolute" id="dropdownMenu"></div>
+                    </div>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0 data-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Mango Size(grams)</th>
+                                            <th>Percentage(Quality)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Small</td>
+                                            <td>249g Down</td>
+                                            <td class="text-center" rowspan="3">Detect up to 0.8 Up</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium</td>
+                                            <td>250g - 299g</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large</td>
+                                            <td>300g Up</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mt-2">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold">Table Data</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info" style="max-height: 35vh;">
+                                <table class="table my-0 data-table" id="element-to-print">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">No.</th>
+                                            <th class="text-center">Weight(g)</th>
+                                            <th class="text-center">Size</th>
+                                            <th class="text-center">Percentage</th>
+                                            <th class="text-center">Quality</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast fade hide" role="alert" data-bs-delay="3000" id="toast-1">
+        <p class="text-center mb-0 mt-0 pt-1 pb-1"><img src="assets/img/mangosort_icon.png" class="me-1">Mango Table Data</p>
+    </div><button class="btn btn-primary btn-sm d-sm-inline-block print-btn" id="download-btn" type="button"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</button>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="assets/js/toast.js"></script>
+    <script src="assets/js/db-init.js"></script>
+    <script src="assets/js/merchant-table.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

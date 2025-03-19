@@ -20,9 +20,9 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admin-dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="merchants.html"><i class="fas fa-users"></i><span>Merchants</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
@@ -37,8 +37,11 @@
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
                         <h3 class="text-dark mb-0" id="db-name">Dashboard</h3>
                     </div>
-                    <div class="dropdown mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="dashboardMenuButton" type="button"></button>
-                        <div class="dropdown-menu position-absolute" id="dropdownMenu"></div>
+                    <div class="dropdown d-inline-block mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="merchantButton" type="button"></button>
+                        <div class="dropdown-menu position-absolute" id="merchantMenu"></div>
+                    </div>
+                    <div class="dropdown d-inline-block mb-2 position-relative"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="dateButton" type="button"></button>
+                        <div class="dropdown-menu position-absolute" id="dateMenu"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4 flip-card">
@@ -161,7 +164,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
     <script src="assets/js/toast.js"></script>
     <script src="assets/js/db-init.js"></script>
-    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-dashboard.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 

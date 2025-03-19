@@ -41,10 +41,13 @@ body {
   width: 9%;
 }
 
+.dropdown .dropdown-menu {
+  width: 100%;
+}
+
 .dropdown-menu {
   max-height: 50vh;
   overflow: scroll;
-  max-width: 142px;
   min-width: 0;
   text-align: center;
 }
@@ -151,5 +154,13 @@ tr td {
   right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.sidebar {
+  width: 5rem;
+}
+
+.sidebar .nav-item .nav-link {
+  width: 5rem;
 }
 

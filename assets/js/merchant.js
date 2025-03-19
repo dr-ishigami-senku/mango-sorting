@@ -49,21 +49,44 @@ merchantsRef.on('value', function (snapshot) {
     confirmBtn.addEventListener("click", () => {
         if (currentButton) {
             const nodeId = currentButton.getAttribute("data-node");
-            const nodePath = `merchants/${nodeId}`;
+            const mPath = `merchants/${nodeId}`;
+            const aPath = `accounts/${nodeId}`;
             const updatedData = {
                 archive: true
             };
-            database.ref(nodePath).update(updatedData);
+            database.ref(mPath).update(updatedData);
+            database.ref(aPath).update(updatedData);
             currentButton = null;
         };
     });
 
     const links = document.querySelectorAll('td.text-start');
-
+    const merchantTitle = document.getElementById("merchant-title");
+    const emailReveal = document.getElementById("email-reveal");
+    const passwordReveal = document.getElementById("password-reveal");
+    
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            localStorage.setItem('name', e.currentTarget.innerText);
-            window.location.href = "dashboard.html";
+            const accounts = database.ref('accounts/');
+            const current_user = e.currentTarget.textContent;
+            merchantTitle.textContent = `${current_user}'s Details`;
+
+            accounts.orderByChild('archive').equalTo(false).once('value', (snapshot) => {
+                const values = snapshot.val();
+                const accountExists = Object.keys(values).some(key => key === current_user);
+
+                if (accountExists) {
+                    accountKey = Object.keys(values).find(key => key === current_user);
+                    emailReveal.textContent = `Email: ${values[accountKey].username}`;
+                    passwordReveal.textContent = `Password: ${values[accountKey].password}`;
+                
+                } else {
+                    console.log("Your account has been archived")
+                };
+            });
+            const noteModal = new bootstrap.Modal(document.getElementById('account-details'));
+            noteModal.show();
+            
         });
     });
 });
