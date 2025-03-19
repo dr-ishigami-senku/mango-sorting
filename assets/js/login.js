@@ -27,15 +27,16 @@ signInButton.addEventListener("click", function () {
             const accountExists = Object.keys(values).some(key => values[key].username === email.value);
 
             if (accountExists) {
-                accountKey = Object.keys(values).find(key => values[key].username === email.value);
+                const accountKey = Object.keys(values).find(key => values[key].username === email.value);
                 localStorage.setItem("name", accountKey);
                 if (accountKey === "Admin")
-                    window.location.href = "/admin-dashboard.html";
+                    window.location.href = "admin-dashboard.html";
                 else {
-                    window.location.href = "/merchant-dashboard.html";
+                    window.location.href = "merchant-dashboard.html";
                 }
             } else {
-                console.log("Your account has been archived")
+                const unable = new bootstrap.Modal(document.getElementById('unable-modal'));
+                unable.show();
             };
         });
     }) //promise

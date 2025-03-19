@@ -13,20 +13,23 @@ const dateMenu = document.getElementById('dateMenu');
 
 db.ref('merchants').on('value', (snapshot) => {
     const merchants = snapshot.val();
+    
     if (merchants) {
         merchantMenu.innerHTML = '';
 
         for (const merchantName in merchants) {
-            const merchantItem = document.createElement('a');
-            merchantItem.classList.add('dropdown-item');
-            merchantItem.textContent = merchantName;
+            if (merchants[merchantName].archive === false) {
+                const merchantItem = document.createElement('a');
+                merchantItem.classList.add('dropdown-item');
+                merchantItem.textContent = merchantName;
 
-            merchantItem.addEventListener('click', () => {
-                merchantButton.textContent = merchantName;
-                updateDateMenu(merchants[merchantName].table.history);
-            });
+                merchantItem.addEventListener('click', () => {
+                    merchantButton.textContent = merchantName;
+                    updateDateMenu(merchants[merchantName].table.history);
+                });
 
-            merchantMenu.appendChild(merchantItem);
+                merchantMenu.appendChild(merchantItem);  
+            };
         }
     }
 });
@@ -90,13 +93,21 @@ function updateDataBasedOnDate(dateData) {
 db.ref('merchants').once('value', (snapshot) => {
     const merchants = snapshot.val();
     if (merchants) {
-        const firstMerchantName = Object.keys(merchants)[0];  
-        merchantButton.textContent = firstMerchantName;
-        updateDateMenu(merchants[firstMerchantName].table.history);
-        
-        const dates = Object.keys(merchants[firstMerchantName].table.history).sort((a, b) => new Date(b) - new Date(a));
-        
-        const latestDate = dates[0];
-        dateButton.textContent = latestDate;
+        for (const merchantKey in merchants) {
+            const merchant = merchants[merchantKey];
+
+            if (merchant.archive === false) {
+                const firstMerchantName = merchantKey;  
+                merchantButton.textContent = firstMerchantName;
+                updateDateMenu(merchant.dashboard.history);
+
+                const dates = Object.keys(merchant.dashboard.history).sort((a, b) => new Date(b) - new Date(a));
+                
+                const latestDate = dates[0];
+                dateButton.textContent = latestDate;
+
+                break;
+            }
+        }
     }
 });
